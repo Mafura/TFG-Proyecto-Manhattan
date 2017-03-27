@@ -4,6 +4,7 @@ using System.Collections;
 public class CameraTriggerController : MonoBehaviour
 {
     private GameObject camera;
+    public GameObject[] adjacentEscenery;
     // Use this for initialization
     void Start()
     {
@@ -28,7 +29,7 @@ public class CameraTriggerController : MonoBehaviour
     {
         if(gameObject.tag == "TriggerH" || gameObject.tag == "TriggerV")
         {
-            camera.GetComponent<CameraController>().Move(gameObject);
+            camera.GetComponent<CameraController>().Move(gameObject, adjacentEscenery[0], adjacentEscenery[1]);
         }
     }
 }

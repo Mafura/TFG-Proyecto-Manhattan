@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour {
 	    
 	}
 
-    public void Move(GameObject trigger)
+    public void Move(GameObject trigger, GameObject escenery1, GameObject escenery2)
     {
         if(trigger.tag == "TriggerV")
         {
