@@ -17,9 +17,8 @@ public class PlayerMovement : MonoBehaviour
     private Block[] blockList;
     private int index = 1;
     public int blockIndex = 0;
-    public float timeStamp = 0.0f;
+    public bool timeFlow = true;
     
-
     // Use this for initialization
     void Start()
     {
@@ -43,12 +42,13 @@ public class PlayerMovement : MonoBehaviour
         if (!flowchart.HasExecutingBlocks())
         {
             move();
-            timeStamp = timeStamp + Time.deltaTime;
+            timeFlow = true;
         }
 
         if (flowchart.HasExecutingBlocks())
         {
             talk();
+            timeFlow = false;
         }
 
         animate();        
@@ -81,7 +81,12 @@ public class PlayerMovement : MonoBehaviour
     private void talk()
     {        
         if (Input.GetKey(KeyCode.E))
-        {   
+        {
+            if (flowchart.HasExecutingBlocks())
+            {
+                Block block = blockList[blockIndex];
+                //block.CommandList.
+            }
             flowchart.ExecuteBlock(blockList[blockIndex], index);
             if (index <= blockList[blockIndex].CommandList.Count)
             {
@@ -89,8 +94,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                index = 1;
-                
+                index = 1;        
             }            
         }
         blockIndex = flowchart.GetIntegerVariable("Index");
