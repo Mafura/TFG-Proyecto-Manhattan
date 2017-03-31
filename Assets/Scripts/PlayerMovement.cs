@@ -79,15 +79,22 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void talk()
-    {        
-        if (Input.GetKey(KeyCode.E))
+    {
+        
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (flowchart.HasExecutingBlocks())
             {
-                Block block = blockList[blockIndex];
-                //block.CommandList.
+                //blockList[blockIndex].Stop();
+                flowchart.ExecuteBlock(blockList[blockIndex], index);
+                //ExecuteEvents.Execute<IPointerClickHandler>(flowchart.gameObject, new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+
             }
-            flowchart.ExecuteBlock(blockList[blockIndex], index);
+            else
+            {
+                flowchart.ExecuteBlock(blockList[blockIndex], index);
+            }
+            
             if (index <= blockList[blockIndex].CommandList.Count)
             {
                 index += 1;
