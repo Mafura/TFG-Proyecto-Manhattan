@@ -7,7 +7,7 @@ using Fungus;
 public class PlayerMovement : MonoBehaviour
 {
     private float speed = 3.0f;
-    private Direction direction = Direction.DOWN;
+    public Direction direction = Direction.DOWN;
     private Rigidbody2D rigidbody;
     private SpriteRenderer renderer;
     public Sprite[] sprites;
@@ -51,7 +51,8 @@ public class PlayerMovement : MonoBehaviour
             timeFlow = false;
         }
 
-        animate();        
+        animate();
+        Debug.Log(direction);
     }
 
     private void move()
