@@ -3,8 +3,10 @@ using System.Collections;
 
 public class ItemInteractuable : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public Transform interactionLocation;
+
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
