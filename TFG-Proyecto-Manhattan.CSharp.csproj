@@ -532,15 +532,27 @@
     <Compile Include="Assets\FungusExamples\FungusLua\Bindings\CustomScript.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\CameraTriggerController.cs" />
+    <Compile Include="Assets\Scripts\FuzzyExpression.cs" />
+    <Compile Include="Assets\Scripts\FuzzyRule.cs" />
+    <Compile Include="Assets\Scripts\FuzzySet.cs" />
+    <Compile Include="Assets\Scripts\FuzzySystem.cs" />
+    <Compile Include="Assets\Scripts\FuzzyValue.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\InventoryEditor.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\ItemInteractuable.cs" />
     <Compile Include="Assets\Scripts\ItemInteractuableEditor.cs" />
+    <Compile Include="Assets\Scripts\LeftFuzzySet.cs" />
+    <Compile Include="Assets\Scripts\LinguisticValue.cs" />
+    <Compile Include="Assets\Scripts\LinguisticVariable.cs" />
     <Compile Include="Assets\Scripts\NPCController.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Point2D.cs" />
+    <Compile Include="Assets\Scripts\RightFuzzySet.cs" />
     <Compile Include="Assets\Scripts\ScreenRegion.cs" />
+    <Compile Include="Assets\Scripts\TrapezoidalFuzzySet.cs" />
+    <Compile Include="Assets\Scripts\TriangularFuzzySet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fungus\Docs\CHANGELOG.txt" />
